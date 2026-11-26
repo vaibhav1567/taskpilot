@@ -159,4 +159,4 @@ setInterval(() => {
 await initAuth();
 await initTasks();
 await initCalendar();
-app.listen(PORT, '127.0.0.1', () => console.log(`TaskPilot running at http://localhost:${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`TaskPilot running at http://localhost:${PORT}`));
