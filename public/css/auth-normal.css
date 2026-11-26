@@ -1,0 +1,10 @@
+:root{color-scheme:light;--blue:#4b6fe8;--muted:#6b7890}
+body{background:linear-gradient(135deg,#f5f8fe,#eaf0fb);color:#23334d}
+.auth{background:#fff;border:1px solid #e0e7f1;box-shadow:0 18px 50px rgba(35,57,98,.12);border-radius:18px}
+.brand{font-family:'Instrument Sans',system-ui,sans-serif;font-weight:750;letter-spacing:-.05em}.brand span{color:#4b6fe8}
+h1{font-family:'Instrument Sans',system-ui,sans-serif;font-weight:750;letter-spacing:-.04em}.eyebrow{color:#4b6fe8}
+.subtitle,.hint,.privacy,.switch{color:#6b7890}
+input{background:#fff;color:#23334d;border:1px solid #d7e0ed}
+input:focus{outline:2px solid #7896ef}.password button,.switch button{color:#4b6fe8}
+.submit{background:#4b6fe8;color:#fff;font-weight:700;box-shadow:0 4px 12px rgba(75,111,232,.22)}.submit:hover{background:#365bd5}
+.error{color:#c74949}

@@ -1,0 +1,49 @@
+<section id="mission" class="view on">
+      <h1>Mission control</h1>
+      <p class="sub">Describe a goal. The agent plans the steps, ranks them by priority and works through them while you watch it build in 3D.</p>
+      <div class="panel" id="calendarPanel" style="margin:18px 0;padding:20px">
+  <h2>Google Calendar</h2><p class="sub">Connect your own Google account and create an event after reviewing its details.</p>
+  <div id="calendarStatus">Checking connection...</div>
+  <div class="actions" style="margin:12px 0"><button type="button" class="btn primary" id="calendarConnect">Connect Google Calendar</button><button type="button" class="btn" id="calendarDisconnect" hidden>Disconnect</button></div>
+  <form id="calendarEventForm" hidden style="display:none;max-width:560px">
+    <label for="calendarTitle">Event title</label><input id="calendarTitle" maxlength="200" required placeholder="Project meeting" />
+    <div class="row"><div><label for="calendarStart">Start</label><input id="calendarStart" type="datetime-local" required /></div><div><label for="calendarEnd">End</label><input id="calendarEnd" type="datetime-local" required /></div></div>
+    <label for="calendarTimezone">Time zone</label><input id="calendarTimezone" value="Asia/Kolkata" required />
+    <label for="calendarDescription">Description (optional)</label><textarea id="calendarDescription" maxlength="2000" rows="2"></textarea>
+    <button class="btn primary" type="submit">Review and create event</button>
+  </form><div id="calendarMessage" role="status" style="margin-top:10px"></div>
+</div>
+<div class="grid-m">
+        <div class="stack">
+          <div class="panel" data-tilt>
+            <h2>Objective</h2>
+            <label for="objective">What should the agent achieve?</label>
+            <textarea id="objective" maxlength="300" placeholder="Integrate Stripe in TypeScript"></textarea>
+            <div class="suggestions-header">
+              <span>Suggested missions <small>· refreshed automatically</small></span>
+              <button type="button" id="refreshSuggestions" class="suggestions-refresh" aria-label="Show more mission suggestions" title="Show more suggestions">↻ More ideas</button>
+            </div>
+            <div class="chips" id="missionSuggestions" aria-label="Suggested missions">
+              <button type="button" class="chip">Build a personal portfolio website</button>
+              <button type="button" class="chip">Plan a product launch</button>
+              <button type="button" class="chip">Create a weekly study schedule</button>
+            </div>
+            <div class="row">
+              <div><label for="model">Model</label><select id="model"></select></div>
+              <div><label for="iters">Steps</label><input id="iters" type="number" min="1" value="5"></div>
+            </div>
+            <div class="actions"><button id="start" class="btn primary">Start agent</button><button id="stop" class="btn" disabled>Stop</button></div>
+            <div id="err" class="err" role="alert"></div>
+          </div>
+          <div class="panel" data-tilt>
+            <h2>Task queue, by priority</h2>
+            <ol id="queue" class="q"></ol>
+            <p id="qEmpty" class="empty">Tasks appear here once the agent starts.</p>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="stage"><span>Live agent map: the core is your objective. Grey = queued, amber = running, green = done.</span></div>
+          <div class="panel" data-tilt><h2>Activity</h2><div id="feed" class="feed"><div>Waiting for a mission.</div></div></div>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TaskPilot</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/normal.css">
+<link rel="stylesheet" href="/css/liquid-glass.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="app">
+  <aside>
+    <div class="logo">Task<i>Pilot</i></div>
+    <nav>
+      <button class="on" data-view="mission">◉ Mission control</button>
+      <button data-view="dash">▥ Dashboard</button>
+      <button data-view="results">☰ Results</button>
+      <button data-view="history">◷ History</button>
+    </nav>
+    <div class="account-box"><span id="accountEmail"></span><button id="logoutBtn" type="button" class="btn">Log out</button></div>
+    <div class="side-status" aria-live="polite"><span id="dot" class="dot"></span><span id="sideText">Idle</span></div>
+  </aside>
+
+  <main id="tabContent"></main>
+</div>
+<script src="/js/loader.js"></script>
+</body>
+</html>

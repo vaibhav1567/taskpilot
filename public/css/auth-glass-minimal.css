@@ -1,0 +1,27 @@
+:root { color-scheme: light; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; color: #333c35; }
+.login-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; overflow: hidden; position: relative;
+  background: radial-gradient(ellipse at 65% 30%, #b9c9b7 0%, transparent 45%), radial-gradient(ellipse at 15% 85%, #b7c9bd 0%, transparent 42%), linear-gradient(130deg, #f6f8f4, #dce7dd 55%, #eef1e9); }
+.login-page::before, .login-page::after { content: ""; position: absolute; width: 46vw; height: 46vw; min-width: 340px; min-height: 340px; border: 2px solid rgba(255,255,255,.72); border-radius: 46%; box-shadow: inset 8px 8px 30px rgba(255,255,255,.52), 0 14px 70px rgba(255,255,255,.28); pointer-events: none; }
+.login-page::before { left: -23vw; bottom: -28vw; transform: rotate(35deg); }
+.login-page::after { right: -27vw; top: -29vw; transform: rotate(-20deg); }
+.glass-card { position: relative; z-index: 1; width: min(100%, 460px); padding: clamp(28px, 5vw, 54px) 34px 30px; border-radius: 48px; background: rgba(255,255,255,.25); border: 2px solid rgba(255,255,255,.75); backdrop-filter: blur(30px) saturate(135%); -webkit-backdrop-filter: blur(30px) saturate(135%); box-shadow: inset 0 2px 5px rgba(255,255,255,.85), 0 30px 75px rgba(55,83,66,.16); }
+#authForm { display: grid; gap: 19px; }
+.field { height: 62px; display: flex; align-items: center; gap: 15px; padding: 0 19px; border: 1.5px solid rgba(255,255,255,.95); border-radius: 23px; background: rgba(255,255,255,.42); box-shadow: inset 0 1px 4px rgba(255,255,255,.8), 0 8px 18px rgba(45,64,52,.07); }
+.field:focus-within { outline: 2px solid rgba(55,89,67,.45); outline-offset: 2px; }
+.field svg { flex: 0 0 22px; width: 22px; fill: none; stroke: #6a726c; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.field input { border: 0; outline: 0; background: transparent; min-width: 0; width: 100%; height: 100%; font: inherit; font-size: 16px; color: #293a30; }
+.field input::placeholder { color: #727b74; }
+.show-password { border: 0; background: transparent; color: #3f5947; font-weight: 600; cursor: pointer; }
+.submit { margin-top: 13px; height: 62px; border: 1px solid #55755c; border-radius: 22px; color: white; background: linear-gradient(135deg, #4e7556, #25452f); box-shadow: 0 14px 25px rgba(36,76,47,.2), inset 0 1px 1px rgba(255,255,255,.28); font-size: 17px; font-weight: 700; cursor: pointer; }
+.submit:hover { filter: brightness(1.06); }
+.submit:disabled { opacity: .6; cursor: wait; }
+.switch { margin: 25px 0 0; text-align: center; font-size: 13px; color: #57685d; }
+.switch button { border: 0; background: none; color: #254a31; font-weight: 700; cursor: pointer; }
+.hint { font-size: 12px; color: #53685a; margin: -10px 0 0; }
+.error { color: #9e2f2f; font-size: 13px; margin: 0; }
+.error:empty { display: none; }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media(max-width: 520px) { .glass-card { border-radius: 32px; padding: 38px 22px 25px; } .field, .submit { height: 58px; } }

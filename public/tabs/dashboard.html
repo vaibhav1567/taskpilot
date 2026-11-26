@@ -1,0 +1,17 @@
+<section id="dash" class="view">
+  <div class="bar"><div><h1>My Dashboard</h1><p class="sub">Choose a mission to see its tasks and progress.</p></div><button class="btn" id="reloadTasks" type="button">Refresh missions</button></div>
+  <div class="bar"><h2>My Missions <span id="missionCount" class="task-pill"></span></h2></div>
+  <p class="err" id="taskError" role="alert"></p>
+  <div id="missionColumns" class="mission-picker"><p class="empty">Loading missions…</p></div>
+  <div id="selectedMission" hidden>
+    <div class="bar mission-detail-heading"><div><h2 id="selectedMissionTitle">Selected mission</h2><p class="empty" id="selectedMissionMeta"></p></div><div class="mission-heading-actions"><button type="button" class="btn mission-delete-btn" id="deleteSelectedMission">Delete mission</button><button type="button" class="btn" id="backToMissions">All missions</button></div></div>
+    <div class="stats">
+      <div class="panel stat"><b id="sTotal">0</b><small>Mission tasks</small></div>
+      <div class="panel stat"><b id="sDone">0</b><small>Completed</small></div>
+      <div class="panel stat"><b id="sProgress">0</b><small>In progress</small></div>
+      <div class="panel stat"><b id="sPending">0</b><small>Pending</small></div>
+    </div>
+    <div class="panel dash-progress"><div class="bar"><h2>Mission completion</h2><strong id="completionPct">0%</strong></div><div class="progress-track" role="progressbar" aria-label="Selected mission task completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><div id="progressFill"></div></div><p class="empty" id="progressSummary"></p></div>
+    <div class="panel"><div class="bar"><div><h2>Tasks in this mission</h2><p class="empty">Update manual tasks here. Connected automation tasks will update after verified execution.</p></div><select id="taskFilter" aria-label="Filter mission tasks"><option value="all">All tasks</option><option value="pending">Pending</option><option value="in_progress">In progress</option><option value="completed">Completed</option></select></div><div id="selectedTaskList"></div></div>
+  </div>
+</section>
