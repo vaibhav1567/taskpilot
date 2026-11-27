@@ -109,7 +109,7 @@ app.post('/api/start', async (req, res) => {
     objective,
     model,
     maxIterations: Math.min(Math.max(iterations, 1), MAX_ITER),
-    apiKey: "ollama",
+    apiKey: process.env.TASKPILOT_OLLAMA_TOKEN || "ollama",
     emit: (event, data) => publish(run, event, data),
   });
   runs.set(runId, run);
